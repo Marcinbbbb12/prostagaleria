@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 function App() {
     const [KwiatyWidocznosc, setKwiatyWidocznosc] = useState(true);
     const [ZwierzetaWidocznosc, setZwierzetaWidocznosc] = useState(true);
     const [AutaWidocznosc, setAutaWidocznosc] = useState(true);
+
     const [count, setCount] = useState(0);
     const increment = () => {
         setCount(count + 1);
@@ -14,7 +16,7 @@ function App() {
 
     return (
         <>
-            <h1>Prosta Galeria</h1>
+            <h1>Kategorie zdjec</h1>
             <div>
                 <label>
                     Pokaż kwiaty
@@ -24,9 +26,12 @@ function App() {
                         onChange={() => setKwiatyWidocznosc(!KwiatyWidocznosc)}
                     />
                 </label>
-                {KwiatyWidocznosc ? <img src="kwiaty.png" alt="loading"/> : <p></p>}
+                {KwiatyWidocznosc ? <img src="obraz1.jpg" alt="loading"/> : <p></p>}
+                {KwiatyWidocznosc ? <img src="obraz2.jpg" alt="loading"/> : <p></p>}
+                {KwiatyWidocznosc ? <img src="obraz7.jpg" alt="loading"/> : <p></p>}
+
             </div>
-            <div>
+            <div className="button">
                 <span>Pobierz {count}</span>
                 <button onClick={increment}>+</button>
             </div>
@@ -39,9 +44,15 @@ function App() {
                         onChange={() => setZwierzetaWidocznosc(!ZwierzetaWidocznosc)}
                     />
                 </label>
-                {ZwierzetaWidocznosc ? <img src="kot.png" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz3.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz4.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz5.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz8.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz9.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz10.jpg" alt="loading"/> : <p></p>}
+                {ZwierzetaWidocznosc ? <img src="obraz11.jpg" alt="loading"/> : <p></p>}
             </div>
-            <div>
+            <div className="button">
                 <span>Pobierz {count}</span>
                 <button onClick={increment}>+</button>
             </div>
@@ -54,9 +65,11 @@ function App() {
                         onChange={() => setAutaWidocznosc(!AutaWidocznosc)}
                     />
                 </label>
-                {AutaWidocznosc ? <img src="auto.png" alt="loading"/> : <p></p>}
+                {AutaWidocznosc ? <img src="obraz6.jpg" alt="loading"/> : <p></p>}
+                {AutaWidocznosc ? <img src="obraz12.jpg" alt="loading"/> : <p></p>}
+
             </div>
-            <div>
+            <div className="button">
                 <span>Pobierz {count}</span>
                 <button onClick={increment}>+</button>
             </div>
